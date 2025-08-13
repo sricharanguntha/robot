@@ -1,0 +1,196 @@
+/* General body styling */
+body {
+  background-color: wheat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+/* Robot container */
+.robot-container {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: wheat;
+}
+
+/* Robot structure */
+.robot {
+  position: relative;
+  width: 100px;
+}
+
+/* Head */
+.head {
+  width: 100px;
+  height: 80px;
+  background-color: #ff4db8;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Eyes */
+.eye {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+}
+
+.eye.left {
+  left: 20px;
+}
+
+.eye.right {
+  right: 20px;
+}
+
+/* Body */
+.body {
+  width: 100px;
+  height: 100px;
+  background-color: #ff4db8;
+  position: relative;
+  top: -2px;
+  margin-bottom:20px;
+  border-radius: 0px 0px 20px 20px;
+}
+
+/* Arms */
+.arm {
+  width: 20px;
+  height: 60px;
+  background-color: #ff4db8;
+  position: absolute;
+  top: 80px;
+  
+ 
+}
+
+.arm.left {
+  left: -29px;
+  border-radius: 10px 10px 10px 10px;
+  
+}
+
+.arm.right {
+  right: -29px;
+  border-radius: 10px 10px 10px 10px;
+    
+}
+
+/* Legs */
+.leg {
+  width: 20px;
+  height: 60px;
+  background-color: #ff4db8;
+  position: absolute;
+  bottom: -15px;
+
+}
+
+.leg.left {
+  left: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.leg.right {
+  right: 20px;
+  border-radius: 0px 0px 10px 10px;
+}
+.robot-container:hover .body{
+    animation: body 1s ease-in-out infinite;
+    border-radius: 40%;
+}
+@keyframes body{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.robot-container:hover .arm.left{
+ animation: left 1s ease-in-out infinite;
+ border-radius: 20%;
+}
+@keyframes left{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.robot-container:hover .arm.right{
+ animation: right 1s ease-in-out infinite;
+ border-radius: 20%;
+}
+@keyframes right{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+}
+.robot-container:hover .leg.right{
+ animation: right 1s ease-in-out  infinite;
+ border-radius: 20%;
+}
+@keyframes right{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(-35deg);
+    }
+}
+.robot-container:hover .leg.left{
+ animation: left 1s ease-in-out infinite;
+ border-radius: 20%;
+}
+@keyframes left{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(35deg);
+    }
+}
+.robot-container:hover .head{
+ animation: head 1s ease-in infinite;
+}
+@keyframes head{
+    0%{
+        width:100px;2
+    }
+    50%{
+       width:130px;
+    }
+    100%{
+      width: 100px;
+    }
+}
+
+
+
+
+
+
+
